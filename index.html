@@ -3,192 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zöldbeton Kft. - Fenntartható betontechnológia és Alfa Növénytámfal</title>
+    <title>Zöldbeton Kft. - Alfa Növénytámfal</title>
     <style>
-        :root {
-            --primary-green: #2e7d32;
-            --dark-grey: #333333;
-            --light-grey: #f4f4f4;
-            --white: #ffffff;
-            --text-color: #444444;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--white);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--white);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--light-grey);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-green);
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
-
-        .hero {
-            padding: 100px 5%;
-            text-align: center;
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000'); /* Környezetbarát textúra háttérnek */
-            background-size: cover;
-        }
-
-        h1 {
-            font-size: 3rem;
-            color: var(--dark-grey);
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-
-        .cta-button {
-            background-color: var(--primary-green);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: background 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .cta-button:hover {
-            background-color: #1b5e20;
-        }
-
-        .section {
-            padding: 70px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: var(--light-grey);
-            padding: 30px;
-            border-radius: 10px;
-            border-top: 5px solid var(--primary-green);
-        }
-
-        .price-tag {
-            font-size: 1.5rem;
-            color: var(--primary-green);
-            font-weight: bold;
-            margin: 15px 0;
-        }
-
-        footer {
-            background-color: var(--dark-grey);
-            color: white;
-            padding: 40px 5%;
-            text-align: center;
-        }
-
-        /* Chatbot helyőrző stílusa */
-        #chat-trigger {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--primary-green);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            cursor: pointer;
-            z-index: 9999;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-        }
+        :root { --primary-green: #2e7d32; --dark-grey: #333333; --light-grey: #f4f4f4; --white: #ffffff; }
+        body { font-family: sans-serif; margin: 0; color: #444; line-height: 1.6; }
+        header { background: var(--white); padding: 20px 5%; border-bottom: 1px solid var(--light-grey); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-green); text-decoration: none; }
+        .hero { padding: 80px 5%; text-align: center; background: var(--light-grey); }
+        h1 { font-size: 2.5rem; color: var(--dark-grey); }
+        .cta-button { background: var(--primary-green); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; cursor: pointer; border: none; }
+        .section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
+        .card { background: white; padding: 30px; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        footer { background: var(--dark-grey); color: white; padding: 30px; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
     <a href="#" class="logo">ZÖLDBETON</a>
-    <nav>
-        <span style="color: var(--dark-grey); font-weight: 500;">Telefon: +36 26 311 791</span>
-    </nav>
+    <div style="font-weight: bold;">+36 26 311 791</div>
 </header>
 
 <section class="hero">
-    <h1>Építkezzen fenntarthatóan, válassza a jövő betontechnológiáját!</h1>
-    <p>ALFA hibrid beton és növénytámfal rendszerek közvetlenül a gyártótól. Akár 30%-kal kisebb karbonlábnyom, kiemelkedő tartósság és mérnöki precizitás.</p>
-    <button class="cta-button" onclick="openChat()">🧱 Alfa Növénytámfal Kalkulátor</button>
+    <h1>Alfa Növénytámfal Kalkulátor</h1>
+    <p>Számolja ki percek alatt a szükséges darabszámot és kérjen ajánlatot!</p>
 </section>
 
-<section class="section" id="termek">
-    <h2 style="text-align: center;">Kiemelt ajánlatunk</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Alfa Növénytámfal</h3>
-            <p>Esztétikus rézsűvédelem és zöldfal építés hibrid betonból. Ellenáll az extrém fagyoknak és a talajnyomásnak.</p>
-            <div class="price-tag">1 190 Ft + ÁFA / db</div>
-            <p><small>* Akciós ár a készlet erejéig!</small></p>
-            <button class="cta-button" style="width: 100%;" onclick="openChat()">Kiszámolom a darabszámot</button>
-        </div>
-        <div class="card">
-            <h3>Zöldbeton Technológia</h3>
-            <p>Innovatív hibrid kötőanyaggal készült beton, mely drasztikusan csökkenti a CO2 lábnyomot és növeli az élettartamot.</p>
-            <ul>
-                <li>Repedésmentes szerkezet</li>
-                <li>Magasabb szulfátállóság</li>
-                <li>Mérnöki támogatás (ALFA útmutató)</li>
-            </ul>
-        </div>
+<section class="section">
+    <div class="card">
+        <h3>Alfa Növénytámfal</h3>
+        <p>Hibrid betontechnológia, esztétikus zöldfelület.</p>
+        <p style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">1 190 Ft + ÁFA / db</p>
+        <p>Kattintson a jobb alsó sarokban lévő buborékra a számításhoz!</p>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 Zöldbeton Kft. | Szentendre, Dózsa György út 26. | www.zoldbeton.hu</p>
+    <p>&copy; 2026 Zöldbeton Kft. | Szentendre, Dózsa György út 26.</p>
 </footer>
-
-<script type="module">
-  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
-
-  Typebot.initBubble({
-    typebot: "my-typebot-9hxvl7l",
-    theme: {
-      button: { backgroundColor: "#1D1D1D" },
-      chatWindow: { backgroundColor: "#F8F8F8" },
-    },
-  });
-</script>
-
 
 </body>
 </html>
